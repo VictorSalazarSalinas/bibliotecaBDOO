@@ -1,26 +1,39 @@
 class Libro:
-    def __init__(self, titulo, autor_nombre, isbn):
-        # Propiedades / Estado inicial
+    def __init__(self, titulo, autor, anio):
         self.titulo = titulo
-        self.autor_nombre = autor_nombre
-        self.isbn = isbn
+        self.autor = autor
+        self.anio = anio
 
-    # Comportamiento: Método para mostrar la información del objeto
     def mostrar_informacion(self):
-        print(f"Título: {self.titulo} | Autor: {self.autor_nombre} | ISBN: {self.isbn}")
+        print(f"Título: {self.titulo} | Autor: {self.autor} | Año: {self.anio}")
 
 
-# Crear instancias (objetos)
-libro1 = Libro("Cien Años de Soledad", "Gabriel García Márquez", "978-0307474728")
-libro2 = Libro("Don Quijote de la Mancha", "Miguel de Cervantes", "978-8424115807")
-# Crear un tercer libro
-libro3 = Libro("Pedro Páramo", "Juan Rulfo", "978-8437604183")
+# NO MODIFICAR
+libro1 = Libro(
+    "Cien años de soledad",
+    "Gabriel García Márquez",
+    1967
+)
 
-# Mostrar todos los libros
-biblioteca = [libro1, libro2, libro3]
-print("--- LISTA DE LIBROS ---")
-for libro in biblioteca:
-    libro.mostrar_informacion()
+libro2 = Libro(
+    "El principito",
+    "Antoine de Saint-Exupéry",
+    1943
+)
+
+
+# COMPLETAR:
+# Crear al menos un tercer libro
+libro3 = Libro(
+    "1984",
+    "George Orwell",
+    1949
+)
+
+# Mostrar la información de todos los libros
+libro1.mostrar_informacion()
+libro2.mostrar_informacion()
+libro3.mostrar_informacion()
 
 """
 explicacion
